@@ -1,0 +1,27 @@
+// Recommended VS Code settings for getting the most out of Copilot agent mode.
+// Copy the ones you want into .vscode/settings.json (workspace) or your User settings.
+// Setting names change between VS Code releases. If one shows as "Unknown
+// configuration setting", search for the feature in the Settings UI instead.
+{
+  // Load .github/copilot-instructions.md and .github/instructions/*.instructions.md
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+
+  // Also read AGENTS.md files (cross-tool instruction format)
+  "chat.useAgentsMdFile": true,
+
+  // Enable Agent Skills (.github/skills/*/SKILL.md)
+  "chat.useAgentSkills": true,
+
+  // Let agent mode run longer before pausing to ask "Continue?"
+  // Long audits and multi-file features need many tool calls.
+  "chat.agent.maxRequests": 100,
+
+  // Enable reusable prompt files (.github/prompts/*.prompt.md → /slash commands)
+  "chat.promptFiles": true,
+
+  // Formatting on save keeps AI edits consistent with the project
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}
